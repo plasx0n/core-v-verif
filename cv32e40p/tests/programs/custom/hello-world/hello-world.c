@@ -43,6 +43,18 @@
 
 int main(int argc, char *argv[])
 {
+
+    printf("Malloc for fun \n"); 
+    int* test = (int*) malloc(100* sizeof(int)); 
+    for (int i = 0; i < 100; i++)
+      test[i] = i ; 
+
+    for (int i = 0; i < 100; i++)
+    {
+      if(!(i%32))printf("\n"); 
+      printf("%4d ", test[i]); 
+    }
+    
     unsigned int misa_rval, mvendorid_rval, marchid_rval, mimpid_rval, mxl;
              int reserved, tentative, nonstd, user, super;
 
