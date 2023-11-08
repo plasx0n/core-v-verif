@@ -1,0 +1,5 @@
+name: polar_fsc
+uvm_test: uvmt_$(CV_CORE_LC)_firmware_test_c
+description: >
+    polar_fsc
+
