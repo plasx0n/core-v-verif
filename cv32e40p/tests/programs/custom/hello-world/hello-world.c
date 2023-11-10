@@ -54,6 +54,16 @@ int main(int argc, char *argv[])
       if(!(i%32))printf("\n"); 
       printf("%4d ", test[i]); 
     }
+
+    int rs1 = 10, 
+        rs2 = 5,
+        rs3 = 8; 
+    int rd  = 0; 
+    asm volatile(" ld3.sign3 %0,%1,%2,%3" \
+                        : "=r" (rd) \
+                        : "r" (rs1), "r" (rs2), "r"(rs3)); 
+    
+    printf("\n %d+%d+%d = %d ", rs1,rs2,rs3,rd ); 
     
     unsigned int misa_rval, mvendorid_rval, marchid_rval, mimpid_rval, mxl;
              int reserved, tentative, nonstd, user, super;
