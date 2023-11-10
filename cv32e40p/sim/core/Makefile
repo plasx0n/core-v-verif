@@ -483,6 +483,7 @@ verilate: testbench_verilator
 
 benchs:
 	make veri-test TEST=ldpc
+	make veri-test TEST=ldpc_cst
 	make veri-test TEST=ldpc_nb
 	make veri-test TEST=polar
 	make veri-test TEST=polar_fsc
