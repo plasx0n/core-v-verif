@@ -481,6 +481,13 @@ endif
 
 verilate: testbench_verilator
 
+benchs:
+	make veri-test TEST=ldpc
+	make veri-test TEST=ldpc_nb
+	make veri-test TEST=polar
+	make veri-test TEST=polar_fsc
+	make veri-test TEST=turbo
+
 sanity-veri-run:
 	make veri-test TEST=hello-world
 
