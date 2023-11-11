@@ -87,10 +87,10 @@ module cv32e40p_tb_wrapper
 
     // instantiate the core
     cv32e40p_core #(
-                 .PULP_XPULP       (PULP_XPULP),
-                 .PULP_CLUSTER     (PULP_CLUSTER),
+                 .COREV_PULP       (PULP_XPULP),
+                 .COREV_CLUSTER     (PULP_CLUSTER),
                  .FPU              (FPU),
-                 .PULP_ZFINX       (PULP_ZFINX),
+                 .ZFINX       (PULP_ZFINX),
                  .NUM_MHPMCOUNTERS (NUM_MHPMCOUNTERS)
                 )
     cv32e40p_core_i
